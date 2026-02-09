@@ -1,4 +1,4 @@
-console.log(yesBtn, noBtn, title, flynnImg);
+
 
 
 const envelope = document.getElementById("envelope-container");
@@ -62,5 +62,6 @@ yesBtn.addEventListener("click", () => {
 //
 //    }
 // });
+
 
 
