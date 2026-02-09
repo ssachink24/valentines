@@ -1,7 +1,11 @@
+console.log(yesBtn, noBtn, title, flynnImg);
+
+
 const envelope = document.getElementById("envelope-container");
 const letter = document.getElementById("letter-container");
-const noBtn = document.querySelector(".no-btn");
-const yesBtn = document.querySelector(".btn[alt='Yes']");
+
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn  = document.querySelector(".no-btn");
 
 const title = document.getElementById("letter-title");
 const flynnImg = document.getElementById("letter-flynn");
@@ -18,17 +22,17 @@ envelope.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-    const min = 200;
-    const max = 200;
+    const min = 100;
+    const max = 300;
 
-    const distance = Math.random() * (max - min)  +min;
-    const angle= Math.random() * Math.PI * 2;
-    
+    const distance = Math.random() * (max - min) + min;
+    const angle = Math.random() * Math.PI * 2;
+
     const moveX = Math.cos(angle) * distance;
     const moveY = Math.sin(angle) * distance;
 
     noBtn.style.transition = "transform 0.3s ease";
-    noBtn.style.transform = `translate(${moveX}px, ${moveY}px )`;
+    noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
 
 
@@ -53,17 +57,12 @@ noBtn.addEventListener("mouseover", () => {
 //    }
 // });
 
-yesBtn.addEventListener("click", () =>{
+yesBtn.addEventListener("click", () => {
     title.textContent = "WAKU WAKU!!!!!!";
-
     flynnImg.src = "tenor.gif";
-
     document.querySelector(".letter-window").classList.add("final");
-
     buttons.style.display = "none";
-
     finalText.style.display = "block";
-
 });
 
 
