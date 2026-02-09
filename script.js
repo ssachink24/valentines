@@ -1,6 +1,8 @@
 const envelope = document.getElementById("envelope-container");
 const letter = document.getElementById("letter-container");
-const noBtn = document.querySelector(".btn[alt='Yes']");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn  = document.getElementById("noBtn");
+
 
 const title = document.getElementById("letter-title");
 const flynnImg = document.getElementById("letter-flynn");
@@ -64,5 +66,6 @@ yesBtn.addEventListener("click", () =>{
     finalText.style.display = "block";
 
 });
+
 
 
