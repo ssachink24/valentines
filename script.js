@@ -12,28 +12,34 @@ const flynnImg = document.getElementById("letter-flynn");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
+
 envelope.addEventListener("click", () => {
     envelope.style.display = "none";
     letter.style.display = "flex";
 
-    setTimeout( () => {
+    setTimeout(() => {
         document.querySelector(".letter-window").classList.add("open");
-    },50);
+    }, 50);
 });
 
 noBtn.addEventListener("mouseover", () => {
-    const min = 100;
-    const max = 300;
-
-    const distance = Math.random() * (max - min) + min;
+    const distance = 200;
     const angle = Math.random() * Math.PI * 2;
 
     const moveX = Math.cos(angle) * distance;
     const moveY = Math.sin(angle) * distance;
 
-    noBtn.style.transition = "transform 0.3s ease";
     noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 });
+
+yesBtn.addEventListener("click", () => {
+    title.textContent = "WAKU WAKU!!!!!!";
+    flynnImg.src = "tenor.gif";
+    document.querySelector(".letter-window").classList.add("final");
+    buttons.style.display = "none";
+    finalText.style.display = "block";
+});
+
 
 
 
@@ -56,13 +62,5 @@ noBtn.addEventListener("mouseover", () => {
 //
 //    }
 // });
-
-yesBtn.addEventListener("click", () => {
-    title.textContent = "WAKU WAKU!!!!!!";
-    flynnImg.src = "tenor.gif";
-    document.querySelector(".letter-window").classList.add("final");
-    buttons.style.display = "none";
-    finalText.style.display = "block";
-});
 
 
